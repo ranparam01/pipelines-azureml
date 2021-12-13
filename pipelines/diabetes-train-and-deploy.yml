@@ -15,7 +15,7 @@ pool:
   vmImage: 'Ubuntu-20.04'
 
 steps:
-- task: Bash@1
+- task: Bash@2
   displayName: "Bash: Downgrade AZ CLI to [2.29.2]"
   inputs:
     targetType: "inline"
