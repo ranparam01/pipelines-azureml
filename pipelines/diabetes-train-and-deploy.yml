@@ -15,12 +15,11 @@ pool:
   vmImage: 'Ubuntu-20.04'
 
 steps:
-- task: AzureCLI@2
+- task: Bash@1
   displayName: "Bash: Downgrade AZ CLI to [2.29.2]"
   inputs:
     targetType: "inline"
     workingDirectory: "$(Build.SourcesDirectory)"
-    scriptType: 'bash'
     script: |
       sudo add-apt-repository https://packages.microsoft.com/repos/azure-cli
       sudo apt update
