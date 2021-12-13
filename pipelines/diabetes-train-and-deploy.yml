@@ -20,6 +20,7 @@ steps:
   inputs:
     targetType: "inline"
     workingDirectory: "$(Build.SourcesDirectory)"
+    scriptType: 'bash'
     script: |
       sudo add-apt-repository https://packages.microsoft.com/repos/azure-cli
       sudo apt update
@@ -34,6 +35,7 @@ steps:
     #scriptType: 'bash'
     #inlineScript: 'az extension add -n azure-cli-ml --version 1.33.1'
     scriptLocation: inlineScript
+    scriptType: 'bash'
     inlineScript: "az extension add --name azure-cli-ml --version 1.33.1"
     useGlobalConfig: true
 
